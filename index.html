@@ -12,10 +12,11 @@
 
 <body>
 
-    <!---Header--->
+    <!-- Header -->
     <section class="header">
         <nav>
             <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
@@ -26,37 +27,42 @@
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </div>
+
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
 
         <div class="text-box">
             <h1>Hi, I'm David Ribeiro</h1>
             <p>This is my personal student portfolio website,<br> built from scratch to showcase my projects and skills.</p>
-            <a href="about.html" class="hero-btn">Know More</a>
+            <a href="about.html" class="hero-btn">Learn More</a>
+        </div>
     </section>
 
-    <!---About/Featured Project Section--->
+    <!-- About Section -->
     <section class="about">
         <h1>About Me</h1>
-        <p>I am a dedicated student with a passion for technology and web development. This portfolio highlights my journey, skills, and the projects I've worked on.</p>
+        <p>I am a dedicated student with a passion for technology and web development. 
+        This portfolio highlights my journey, skills, and the projects I've worked on.</p>
         <a href="about.html" class="hero-btn">Read More</a>
+    </section>
 
+    <!-- Featured Project Section -->
+    <section class="featured">
         <h1>Featured Project</h1>
-        <p>Check out my latest project where I developed a responsive web application using HTML, CSS, and JavaScript.</p>
+        <p>Check out my latest project where I developed a responsive web application using 
+        HTML, CSS, and JavaScript.</p>
         <a href="projects.html" class="hero-btn">View Projects</a>
         <a href="certifications.html" class="hero-btn">View Certifications</a>
-
     </section>
 
-    <!---Contact Section--->
-    <section>
+    <!-- Contact Section (blank for now) -->
+    <section class="contact"></section>
 
-    </section>
-
-    <!---Footer--->
+    <!-- Footer -->
     <section class="footer">
         <h4>About Me</h4>
         <p>test <br> text</p>
+
         <div class="icons">
             <a href="#"><i class="fa fa-facebook"></i></a>
             <a href="#"><i class="fa fa-twitter"></i></a>
@@ -65,12 +71,14 @@
         </div>
     </section>
 
-    <!----Javascript---->
+    <!-- Javascript -->
     <script>
         var navLinks = document.getElementById("navLinks");
+
         function showMenu() {
             navLinks.style.right = "0";
         }
+
         function hideMenu() {
             navLinks.style.right = "-200px";
         }
