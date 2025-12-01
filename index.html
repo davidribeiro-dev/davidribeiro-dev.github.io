@@ -12,19 +12,30 @@
 
 <body>
 
+    <!-- Left Social Links -->
+    <div class="socials">
+        <a href="https://github.com/davidribeiro-dev"><i class="fa fa-github"></i></a>
+        <a href="https://instagram.com/d.ribeiro0"><i class="fa fa-instagram"></i></a>
+    </div>
+    <!-- Right Email -->
+    <div class="email">
+        <span>drribeiro02@gmail.com</span>
+    </div>
+
     <!-- Header -->
-    <section class="header">
+    <section id="home" class="header">
         <nav>
             <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
 
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="projects.html">PROJECTS</a></li>
-                    <li><a href="certifications.html">CERTIFICATIONS</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#certifications">CERTIFICATIONS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <a href="pdf/Academic Resume.pdf" class="hero-btn" download>Resume</a>
                 </ul>
             </div>
 
@@ -32,49 +43,214 @@
         </nav>
 
         <div class="text-box">
-            <h1>Hi, I'm David Ribeiro</h1>
+            <p>Hello, my name is</p>
+            <h1>David Ribeiro</h1>
             <p>This is my personal student portfolio website,<br> built from scratch to showcase my projects and skills.</p>
-            <h2>Personal Goals:</h2>
-            <ul>
-                <li>Learn and master web development technologies.</li>
-                <li>Build a strong portfolio to showcase my skills.</li>
-            </ul>
-            <a href="about.html" class="hero-btn">Learn More</a>
+            <a href="#projects" class="hero-btn">Learn More</a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about">
+    <section id="about" class="about">
+    <div class="about-text">
         <h1>About Me</h1>
-        <p>I am a dedicated student with a passion for technology and web development. 
-        This portfolio highlights my journey, skills, and the projects I've worked on.</p>
-        <a href="about.html" class="hero-btn">Read More</a>
-    </section>
+        <p>I am a dedicated student with a passion for technology. This portfolio highlights my journey, skills, and the projects I've worked on.</p>
+        
+        <h3>Education</h3>
+        <p>Currently studying at Blue Hills Regional Technical School, focusing on cybersecurity and IT.</p>
+        
+        <h3>Hobbies & Passions</h3>
+        <ul>
+            <li>Exploring new possibilities for growth, hoping to start traveling</li>
+            <li>Working on personal projects that push current knowledge</li>
+            <li>Experimenting with networking and cybersecurity tools</li>
+        </ul>
+    </div>
+     </div>
 
-    <!-- Featured Project Section -->
-    <section class="featured">
-        <h1>Featured Project</h1>
-        <p>Check out my latest project where I developed a responsive web application using 
-        HTML, CSS, and JavaScript.</p>
-        <a href="projects.html" class="hero-btn">View Projects</a>
-        <a href="certifications.html" class="hero-btn">View Certifications</a>
-    </section>
-
-    <!-- Contact Section (blank for now) -->
-    <section class="contact"></section>
-
-    <!-- Footer -->
-    <section class="footer">
-        <h4>About Me</h4>
-        <div class="icons">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
+        <div class="about-img">
+            <img src="images/about.JPG" alt="About Me">
         </div>
     </section>
 
-    <!-- Javascript -->
+    <!-- Featured Project Section -->
+    <section id="projects" class="projects">
+    <h2 class="section-title"><span>Some of My Work: </span></h2>
+
+    <!-- CARD 1 — NORMAL -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="images/pigame.png" alt="">
+        </div>
+        <div class="project-info-container">
+            <p class="featured-label">Featured Project</p>
+            <h3 class="project-title">Pi Game 3.0</h3>
+            <div class="project-description">
+                Second Iteration of the Pi Game 2.0, which was first project worked on using C# and 2D physics. This project turned to 3D, working on movement physics and multiplayer.  
+                <br><br> Inspired by DanisTutorials <span class="highlight">How to Make Grappling Gun in Unity</span>.
+            </div>
+            <div class="project-links">
+                <a href="#"><i class="fa fa-github"></i></a>
+                <a href="#"><i class="fa fa-external-link"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- CARD 2 — REVERSED -->
+    <div class="project-card reverse">
+        <div class="project-image">
+            <img src="images/arduino.png" alt="">
+        </div>
+        <div class="project-info-container">
+            <p class="featured-label">Featured Project</p>
+            <h3 class="project-title">Arduino Automation Program</h3>
+            <div class="project-description">
+                An automation program that utilizes an Arudino microcontroller to auto-enroll student chromebooks into the school's OU. 
+                <br><br> Written in C++, slight reference to <span class="highlight">Arduino Centipede Documentation</span>.
+            </div>
+            <div class="project-links">
+                <a href="#"><i class="fa fa-github"></i></a>
+                <a href="#"><i class="fa fa-external-link"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- CARD 3 — NORMAL -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="images/packet.png" alt="">
+        </div>
+        <div class="project-info-container">
+            <p class="featured-label">Recent Project</p>
+            <h3 class="project-title">WLAN Network Configuration</h3>
+            <div class="project-description">
+                Configured a secure WLAN network using Cisco Packet Tracer, implementing SSID, WPA2 security, and VLANs for segmenting traffic.
+                <br><br> Based on Cisco NetAcad <span class="highlight">CCNA Switching and Wireless Essentials</span>.
+            </div>
+            <div class="project-links">
+                <a href="#"><i class="fa fa-github"></i></a>
+                <a href="#"><i class="fa fa-external-link"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Certifications Section -->
+<section id="certifications" class="certifications">
+    <h2 class="cert-title"><span>Certifications</span></h2>
+
+    <div class="cert-grid">
+
+        <!-- CARD 1 -->
+        <div class="cert-card">
+            <div class="cert-icon">
+                <i class="fa fa-graduation-cap"></i>
+            </div>
+            <h3 class="cert-title">CompTIA ITF+</h3>
+            <p class="cert-desc">
+                Fundamental IT concepts: hardware, software, basic networking, and introductory cybersecurity principles.
+            </p>
+            <div class="cert-tags">
+                <span>IT Fundamentals</span><span>Hardware</span><span>CompTIA</span>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="cert-card">
+            <div class="cert-icon">
+                <i class="fa fa-cogs"></i>
+            </div>
+            <h3 class="cert-title">ITS Device Configuration & Management</h3>
+            <p class="cert-desc">
+                Hands-on device setup, OS configuration, patching, and basic device lifecycle management and troubleshooting.
+            </p>
+            <div class="cert-tags">
+                <span>Device Mgmt</span><span>Configuration</span><span>ITS</span>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="cert-card">
+            <div class="cert-icon">
+                <i class="fa fa-shield"></i>
+            </div>
+            <h3 class="cert-title">ITS Cybersecurity</h3>
+            <p class="cert-desc">
+                Introductory security topics: threat identification, secure configurations, and basic incident response concepts.
+            </p>
+            <div class="cert-tags">
+                <span>Security</span><span>Threats</span><span>Defence</span>
+            </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="cert-card">
+            <div class="cert-icon">
+                <i class="fa fa-lock"></i>
+            </div>
+            <h3 class="cert-title">Google Cybersecurity</h3>
+            <p class="cert-desc">
+                Google-hosted coursework on security fundamentals, risk assessment, and protective controls for web and cloud systems.
+            </p>
+            <div class="cert-tags">
+                <span>Cybersecurity</span><span>Risk</span><span>Google</span>
+            </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="cert-card">
+            <div class="cert-icon">
+                <i class="fa fa-sitemap"></i>
+            </div>
+            <h3 class="cert-title">ITS Networking</h3>
+            <p class="cert-desc">
+                Networking fundamentals: LAN/WAN concepts, IP addressing, basic routing and switches, and troubleshooting techniques.
+            </p>
+            <div class="cert-tags">
+                <span>Networking</span><span>Routing</span><span>ITS</span>
+            </div>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="cert-card">
+            <div class="cert-icon">
+                <i class="fa fa-sitemap"></i>
+            </div>
+            <h3 class="cert-title">CCNA: Introduction to Networks</h3>
+            <p class="cert-desc">
+                Introductory Cisco networking: OSI model, switching and routing basics, subnetting, and foundational network infrastructure topics.
+            </p>
+            <div class="cert-tags">
+                <span>CCNA</span><span>Subnetting</span><span>Routing</span>
+            </div>
+        </div>
+
+        <a href="https://github.com/davidribeiro-dev" class="hero-btn">View More</a>
+    </div>
+
+
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+         <div class="contact-info">
+        <h1>Contact Me</h1>
+        <p>Email: <strong>drribeiro02@gmail.com</strong></p>
+        <p>School Email: <strong>david.ribeiro@bluehills.org</strong></p>
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <p class="footer-copy">&copy; 2025 David Ribeiro. Best Intended for Desktop. Built with HTML, CSS, JavaScript.</p>
+        <a href="#" class="back-to-top" id="backToTop">&#8679;</a>
+    </section>
+
+
+    <!-- JAVASCRIPT -->
+    <!-- Navigation Menu Script -->
     <script>
         var navLinks = document.getElementById("navLinks");
 
@@ -85,6 +261,24 @@
         function hideMenu() {
             navLinks.style.right = "-200px";
         }
+    </script>
+    <!-- Back to Top Button Script -->
+    <script>
+    const backToTop = document.getElementById("backToTop");
+
+        window.addEventListener("scroll", () => {
+         if (window.scrollY > 300) {
+          backToTop.style.display = "block";
+         } else {
+          backToTop.style.display = "none";
+        }
+    });
+
+// Smooth scroll
+    backToTop.addEventListener("click", (e) => {
+     e.preventDefault();
+     window.scrollTo({ top: 0, behavior: "smooth" });
+    });
     </script>
 </body>
 </html>
