@@ -155,6 +155,7 @@ nav img {
 }
 body {
     background: #474d6d; 
+    overflow-x: hidden;
 }
 
 
@@ -475,24 +476,55 @@ nav .fa {
 /* RESPONSIVE */
 @media (max-width: 700px) {
 
-    .text-box h1 {
-        font-size: 32px;
+    /* HERO */
+    .header {
+        min-height: 60vh;
     }
 
+    .text-box {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 90%;
+        max-width: 720px;
+        margin: 6vh auto;
+        text-align: center;
+        padding: 0 4%;
+    }
+
+    .text-box h1 {
+        font-size: 32px;
+        line-height: 1.1;
+        margin-bottom: 0.6rem;
+    }
+
+    .text-box p {
+        font-size: 15px;
+    }
+
+    .hero-btn {
+        padding: 10px 22px;
+        font-size: 14px;
+    }
+
+    /* SECTIONS: stack and center content */
     .about,
     .featured,
     .contact {
         flex-direction: column;
         text-align: center;
-        padding: 50px 5%;
+        padding: 40px 5%;
     }
 
     .about-text,
     .featured-text,
     .contact-info {
-        max-width: 90%;
+        max-width: 95%;
+        margin: 0 auto;
     }
 
+    /* NAVIGATION mobile */
     .nav-links ul li {
         display: block;
     }
@@ -501,12 +533,18 @@ nav .fa {
         position: absolute;
         background: hsl(216, 2%, 55%);
         height: 100vh;
-        width: 200px;
+        width: 240px;
         top: 0;
-        right: -200px;
-        z-index: 2;
-        transition: 1s;
+        right: 0;
+        transform: translateX(100%);
+        z-index: 2000;
+        transition: transform 0.35s ease;
         text-align: left;
+        will-change: transform;
+    }
+
+    .nav-links.open {
+        transform: translateX(0);
     }
 
     nav .fa {
@@ -520,4 +558,84 @@ nav .fa {
     .nav-links ul {
         padding: 30px;
     }
+
+    /* hide fixed sidebars on small screens to avoid overlap/scroll */
+    .socials, .email {
+        display: none;
+    }
+
+    /* PROJECTS: stack cards and make descriptions flow naturally on small screens */
+    .project-card {
+        display: block;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-top: 20px;
+    }
+
+    .project-card .project-image,
+    .project-card .project-info-container {
+        position: static;
+        padding-left: 0;
+        padding-right: 0;
+        order: initial;
+    }
+
+    .project-image img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+    }
+
+    .project-info-container {
+        padding-top: 20px;
+    }
+
+    .project-title {
+        text-align: center;
+        margin-bottom: 0.4rem;
+    }
+
+    .project-description {
+        position: static;
+        width: 100%;
+        left: auto;
+        right: auto;
+        top: auto;
+        transform: none;
+        margin: 8px 0 0 0;
+        box-shadow: none;
+        padding: 16px;
+    }
+
+    .project-links {
+        position: static;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .project-links a {
+        margin: 0 8px;
+        font-size: 20px;
+    }
+
+    .project-card.reverse .project-description {
+        right: auto;
+        left: auto;
+    }
+
+    /* CERTIFICATIONS: make grid single-column */
+    .cert-grid {
+        grid-template-columns: 1fr;
+        width: 95%;
+    }
+
+    /* Reduce paddings for very small screens */
+    @media (max-width: 420px) {
+        .text-box h1 { font-size: 28px; }
+        .text-box { margin: 4vh auto; padding: 0 6%; }
+        .projects { margin: 80px auto; padding: 0 4%; }
+        .about, .contact { padding: 30px 4%; }
+    }
+
 }

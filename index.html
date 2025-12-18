@@ -255,11 +255,11 @@
         var navLinks = document.getElementById("navLinks");
 
         function showMenu() {
-            navLinks.style.right = "0";
+            navLinks.classList.add('open');
         }
 
         function hideMenu() {
-            navLinks.style.right = "-200px";
+            navLinks.classList.remove('open');
         }
     </script>
     <!-- Back to Top Button Script -->
