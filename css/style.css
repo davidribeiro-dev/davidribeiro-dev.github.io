@@ -1,9 +1,7 @@
-
 * {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
 }
 
 /* Smooth scrolling for in-page anchors */
@@ -299,18 +297,6 @@ body {
     margin: 0 auto;
 }
 @media (max-width: 700px) {
-
-    /* Prevent any horizontal scrolling on small viewports */
-    html, body {
-        overflow-x: hidden;
-    }
-
-    /* Ensure images never exceed their container */
-    img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-    }
     .cert-grid {
         grid-template-columns: 1fr;
         width: 90%;
