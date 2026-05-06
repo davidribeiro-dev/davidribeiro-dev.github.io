@@ -7,7 +7,7 @@
 
 This is the source code for [davidribeiro-dev.github.io](https://davidribeiro-dev.github.io/) — a static personal portfolio website built from scratch and hosted on GitHub Pages.
 
-The site presents selected projects, earned certifications, and contact information for David Ribeiro, a CIS student at Blue Hills Regional Technical School pursuing IT and cybersecurity internships.
+The site presents selected projects, earned certifications, and contact information for David Ribeiro, a CIS student at Blue Hills Regional Technical.
 
 ## Copyright and License Information
 
